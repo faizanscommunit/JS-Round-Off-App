@@ -1,8 +1,8 @@
 # JS-Round-Off-App
-*- Responsive Design
+- Responsive Design
 - Attractive
 - MIT Licensed
-- Easy to Use*
+- Easy to Use
 
 ------------
 
