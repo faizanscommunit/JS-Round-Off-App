@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="round_off.css">
+    <title>Round Off | By Faizanscommunit</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Round Off</h2><br>
+        <input type="number" name="value" id="value">
+        <button class="btn" onclick="round_off()">Round Off</button>
+        <br><br>
+        <label for="nearest">To nearest:</label>
+        <select class="select" id="nearest">
+            <option value="1000">1000</option>
+            <option value="100">100</option>
+            <option value="10">10</option>
+        </select><br><br>
+        <span>Answer: <span id="answer">0</span></span>
+    </div>
+    <script>
+        function round_off(params) {
+            const value = document.getElementById('value').value;
+            const nearest = document.getElementById('nearest').value;
+            console.log(nearest)
+            document.getElementById('answer').style.color = 'white'
+            document.getElementById('answer').innerHTML = Math.round(parseInt(value) / nearest) * nearest
+            if (value == '') {
+                document.getElementById('answer').style.color = 'white'
+                document.getElementById('answer').innerHTML = 'Please write a Value!'
+            }
+        }
+    </script>
+</body>
+</html>
